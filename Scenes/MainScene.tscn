@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Enemy.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Level.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Collectible.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=4]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Level" parent="." instance=ExtResource( 2 )]
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+
+[node name="Enemy" parent="." instance=ExtResource( 1 )]
+position = Vector2( 150, 0 )
+
+[node name="Collectible" parent="." instance=ExtResource( 3 )]
+position = Vector2( 200, 0 )

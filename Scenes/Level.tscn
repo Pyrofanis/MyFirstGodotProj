@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/LandTileSetInittiation.png" type="Texture" id=2]
+
+[node name="Level" type="Node2D"]
+
+[node name="LevelSprite" type="Sprite" parent="."]
+show_behind_parent = true
+scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+
+[node name="Colliders" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Colliders"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Colliders/StaticBody2D"]
+position = Vector2( -251, -267 )
+build_mode = 1
+polygon = PoolVector2Array( -1, -1, -5, 523, 508, 520, 508, 11, -3, 10, 124, 25, 124, 447, 506, 445, 508, 27, 450, 23, 388, 48, 251, 37, 185, 57, 124, 25 )
