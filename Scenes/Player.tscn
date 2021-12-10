@@ -8,6 +8,7 @@
 [node name="Player" type="Node2D"]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+scale = Vector2( 0.4, 0.4 )
 script = ExtResource( 3 )
 
 [node name="Body" type="CollisionPolygon2D" parent="KinematicBody2D"]
@@ -49,5 +50,8 @@ polygon = PoolVector2Array( 11.379, -10.748, 14.7202, -16.9798, 20.4287, -6.3772
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 rotation = -1.53461
-zoom = Vector2( 0.4, 0.4 )
+current = true
+zoom = Vector2( 0.3, 0.3 )
+limit_smoothed = true
+editor_draw_limits = true
 script = ExtResource( 4 )
