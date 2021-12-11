@@ -6,6 +6,7 @@
 [ext_resource path="res://Scenes/CameraTrackerPlayer.gd" type="Script" id=4]
 
 [node name="Player" type="Node2D"]
+show_behind_parent = true
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 scale = Vector2( 0.4, 0.4 )
@@ -31,13 +32,12 @@ texture = ExtResource( 2 )
 rotation = 1.5708
 
 [node name="Body" type="Bone2D" parent="KinematicBody2D/Skeleton2D"]
-position = Vector2( -26, 7.567e-10 )
-rotation = -0.154011
+position = Vector2( 8.39233e-05, 22.5 )
+rotation = -1.67726
 rest = Transform2D( 1, 0.000300072, -0.000300072, 1, 0, 0 )
 
 [node name="Head" type="Bone2D" parent="KinematicBody2D/Skeleton2D/Body"]
 position = Vector2( 16.0009, 2.9952 )
-rotation = 0.158559
 rest = Transform2D( -0.99976, 0.0219219, -0.0219219, -0.99976, 1.90731e-06, -1.19782e-07 )
 __meta__ = {
 "_edit_ik_": true
@@ -49,9 +49,13 @@ build_mode = 1
 polygon = PoolVector2Array( 11.379, -10.748, 14.7202, -16.9798, 20.4287, -6.37729, 13.3856, 18.7304, -2.85268, 22.3799, -10.367, 19.6348, -21.7111, 6.97343, -13.3856, -18.7304, -2.78302, -24.4388, 1.64298, -13.2401, 10.4397, -11.0911 )
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
-rotation = -1.53461
+rotation = -1.5708
 current = true
-zoom = Vector2( 0.3, 0.3 )
+zoom = Vector2( 0.4, 0.4 )
+limit_left = -300
+limit_top = -300
+limit_right = 300
+limit_bottom = 319
 limit_smoothed = true
 editor_draw_limits = true
 script = ExtResource( 4 )
