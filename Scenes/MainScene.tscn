@@ -11,7 +11,9 @@ position = Vector2( 9, -19 )
 [node name="Apple" parent="." groups=["collectible"] instance=ExtResource( 2 )]
 position = Vector2( 172, -23 )
 
-[connection signal="body_shape_entered" from="Apple/Area2D" to="Player/ColisionManager" method="_on_Area2DColisionDetection_area_entered"]
+[node name="Area2D" parent="Apple" index="0" groups=["apple"]]
+
+[node name="CollisionShape2D" parent="Apple/Area2D" index="1" groups=["apple"]]
 
 [editable path="Player"]
 [editable path="Apple"]
