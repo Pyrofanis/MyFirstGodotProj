@@ -1,47 +1,28 @@
 extends KinematicBody2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-export (int) var speed=	100
-var velocity=Vector2()
-var playerTransform=Transform2D()
+export var speed:float=10000
 
-var horizontalDir=0
-var verticalDir=0
+var initialSpeed:float=0
 
-# Called when the node enters the scene tree for the first time.
+var direction:Vector2=Vector2.ZERO
+
 func _ready():
-	pass # Replace with function body.
-
-
+	Initializer()
+func _process(delta):
+	Sprint()
+	RotationApplier()
+	Movement(delta)	
+func Initializer():
+	initialSpeed=speed
+func RotationApplier():
+	rotation=direction.angle()
 func Movement(delta):
+	direction.x=Input.get_axis("Left","Right")
+	direction.y=Input.get_axis("Up","Down")
+	direction=move_and_slide(direction*speed*delta)
+func Sprint():
+	if Input.is_action_pressed(("Sprint")):
+		speed=2*initialSpeed
+	else :
+		speed=initialSpeed
 
-	horizontalDir=0
-	verticalDir=0
-	
-	if Input.is_action_pressed("Left"):
-		 horizontalDir= Vector2.LEFT.x
-	if Input.is_action_pressed("Right"):
-		 horizontalDir=-Vector2.LEFT.x
-	if Input.is_action_pressed("Down"):
-		 verticalDir=-Vector2.UP.y
-	if  Input.is_action_pressed("Up"):
-		 verticalDir=Vector2.UP.y
-	
-	velocity=Vector2(horizontalDir,verticalDir)
-		
-	position +=velocity.normalized()*speed*delta
-	
-func Rotation():
-	rotation=velocity.angle()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-func _process(delta):	
-	Movement(delta)
-	Rotation()
-	velocity=move_and_slide((velocity))
-#	print (velocity)
-	print(rad2deg( rotation),"Deg")
-	print(velocity," velocity")
