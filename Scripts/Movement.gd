@@ -25,4 +25,3 @@ func Sprint():
 		speed=2*initialSpeed
 	else :
 		speed=initialSpeed
-

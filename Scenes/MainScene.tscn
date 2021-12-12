@@ -11,9 +11,8 @@ position = Vector2( 9, -19 )
 [node name="Apple" parent="." groups=["collectible"] instance=ExtResource( 2 )]
 position = Vector2( 172, -23 )
 
-[node name="Area2D" parent="Apple" index="0" groups=["apple"]]
-
-[node name="CollisionShape2D" parent="Apple/Area2D" index="1" groups=["apple"]]
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
 
 [editable path="Player"]
 [editable path="Apple"]

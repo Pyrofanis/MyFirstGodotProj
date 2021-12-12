@@ -11,6 +11,8 @@ script = ExtResource( 2 )
 finalPos = Vector2( 5, 5 )
 
 [node name="PlayerDetector" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
 
 [node name="Sprite" type="Sprite" parent="PlayerDetector"]
 texture = ExtResource( 1 )
@@ -19,3 +21,5 @@ texture = ExtResource( 1 )
 position = Vector2( 1, -1 )
 rotation = 0.150094
 shape = SubResource( 1 )
+
+[connection signal="area_entered" from="PlayerDetector" to="." method="_on_PlayerDetector_area_entered"]
