@@ -15,12 +15,21 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Test 1"
-run/main_scene="res://Scenes/MainScene.tscn"
+run/main_scene="res://Scenes/PlayerFoxScene.tscn"
 config/icon="res://icon.png"
+
+[debug]
+
+gdscript/completion/autocomplete_setters_and_getters=true
+gdscript/warnings/unused_class_variable=true
+gdscript/warnings/unsafe_property_access=true
+gdscript/warnings/unsafe_method_access=true
+gdscript/warnings/unsafe_cast=true
+gdscript/warnings/unsafe_call_argument=true
 
 [editor_plugins]
 
-enabled=PoolStringArray(  )
+enabled=PoolStringArray( "res://addons/ridiculous_coding/plugin.cfg" )
 
 [input]
 

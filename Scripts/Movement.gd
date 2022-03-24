@@ -1,4 +1,8 @@
-extends Node
+extends KinematicBody2D 
+
+
+export  var speed =200
+export var velocity = Vector2()
 
 
 # Declare member variables here. Examples:
@@ -12,5 +16,12 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	_getVelcoty()
+	move_and_collide(velocity*speed)
+	set_global_rotation(velocity.angle())
+	pass
+func _getVelcoty():
+	velocity.x=Input.get_axis("Left","Right")
+	velocity.y=Input.get_axis("Up","Down")
+
