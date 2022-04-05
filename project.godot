@@ -15,21 +15,16 @@ _global_script_class_icons={
 [application]
 
 config/name="Project Test 1"
-run/main_scene="res://Scenes/PlayerFoxScene.tscn"
+run/main_scene="res://Scenes/MainScene.tscn"
 config/icon="res://icon.png"
 
 [debug]
 
-gdscript/completion/autocomplete_setters_and_getters=true
-gdscript/warnings/unused_class_variable=true
-gdscript/warnings/unsafe_property_access=true
-gdscript/warnings/unsafe_method_access=true
-gdscript/warnings/unsafe_cast=true
 gdscript/warnings/unsafe_call_argument=true
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/ridiculous_coding/plugin.cfg" )
+enabled=PoolStringArray( "res://addons/Todo_Manager/plugin.cfg" )
 
 [input]
 
@@ -60,7 +55,7 @@ Down={
 Sprint={
 "deadzone": 0.5,
 "events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777238,"unicode":0,"echo":false,"script":null)
-, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777237,"unicode":0,"echo":false,"script":null)
  ]
 }
 
