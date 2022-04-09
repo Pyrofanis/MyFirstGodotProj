@@ -19,12 +19,11 @@ func _on_Area2D_area_entered(area:Area2D):
 
 func on_item_detection(body:Area2D):
 	_detect_item(body)
-	_calc_new_post()
+	if coli_name.to_lower()=="fox":
+		_calc_new_post()
 
 func _detect_item(body:Area2D):
 	coli_name=body.get_parent().get_parent().name
-	print(coli_name)
-
 func _calc_new_post():
 	
 	var new_Pos=Vector2.ZERO
