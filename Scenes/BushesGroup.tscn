@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/bush.tscn" type="PackedScene" id=1]
+
+[node name="Bushes" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -290, 296 )
+scale = Vector2( 1.85938, 1.86875 )
+
+[node name="Node2D2" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( 181, -123 )
+scale = Vector2( 1.85938, 1.86875 )
+
+[node name="Node2D3" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -303, -352 )
+scale = Vector2( 1.85938, 1.86875 )
+
+[node name="Node2D4" type="Node2D" parent="." instance=ExtResource( 1 )]
+position = Vector2( -171, -33 )
+scale = Vector2( 1.85938, 1.86875 )
