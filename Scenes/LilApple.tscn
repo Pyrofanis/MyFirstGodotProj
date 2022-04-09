@@ -12,7 +12,6 @@
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 3 )
-places = [ Vector2( 467, -259 ), Vector2( -467, 259 ) ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( -2, 4 )
