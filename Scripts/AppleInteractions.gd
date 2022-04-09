@@ -6,7 +6,7 @@ var initial_Pos=Vector2.ZERO
 var current_pos=Vector2.ZERO
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	initial_Pos=get_parent().position
+	initial_Pos=global_position
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,9 +33,9 @@ func _calc_new_post():
 
 	new_pos_x=rand_range(-initial_Pos.x,initial_Pos.x)
 	new_pos_y=rand_range(-initial_Pos.y,initial_Pos.y)
-
 	new_Pos=Vector2(new_pos_x,new_pos_y)
+
 	_set_new_pos(new_Pos)
 
 func _set_new_pos(new_Pos:Vector2):
-	get_parent().position=new_Pos
+	global_position=new_Pos
