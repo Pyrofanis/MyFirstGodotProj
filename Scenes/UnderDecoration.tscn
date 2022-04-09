@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sprites/LandNew/ForsetLand.png" type="Texture" id=1]
+
+[node name="Land" type="Node2D"]
+
+[node name="BaseBackground" type="Sprite" parent="."]
+position = Vector2( -1.00002, 3.99998 )
+scale = Vector2( 1.85938, 1.86875 )
+texture = ExtResource( 1 )
