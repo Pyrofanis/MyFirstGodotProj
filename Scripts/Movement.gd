@@ -3,7 +3,7 @@ extends KinematicBody2D
 
 export  var speed =200
 var initialspeed=0
-export var velocity = Vector2()
+var velocity = Vector2()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -15,16 +15,21 @@ func _ready():
 func _process(delta):
 	_getVelcoty()
 	_run()
-	move_and_collide(velocity*speed)
-	set_global_rotation(velocity.angle())
+	movement()
 	pass
-	
+
+func movement():
+	move_and_collide(velocity*speed)
+	if velocity!=Vector2.ZERO:
+		set_global_rotation(velocity.angle())
+	pass
+
 func _getVelcoty():
 	velocity.x=Input.get_axis("Left","Right")
 	velocity.y=Input.get_axis("Up","Down")
 
 func _run():
 	if (Input.get("Sprint")):
-		speed=initialspeed+0.2*initialspeed
+		speed=initialspeed+4*initialspeed
 	else :
 		speed=initialspeed
