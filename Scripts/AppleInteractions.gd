@@ -37,4 +37,5 @@ func _calc_new_post():
 	_set_new_pos(new_Pos)
 
 func _set_new_pos(new_Pos:Vector2):
-	global_position=new_Pos
+	get_parent().global_position=new_Pos
+
