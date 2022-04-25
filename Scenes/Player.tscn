@@ -12,7 +12,8 @@ extents = Vector2( 30, 24 )
 
 [node name="fox" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 12
+timer = 30
+duriation = 2
 
 [node name="Head" type="Sprite" parent="."]
 rotation = 1.5708
