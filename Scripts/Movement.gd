@@ -23,7 +23,7 @@ func _process(delta):
 func _general_Process(delta):
 	_getVelcoty()
 	_run_Countdown(delta)
-	print(timerCountDown)
+	#print(timerCountDown)
 	movement(delta)
 
 func movement(delta):
