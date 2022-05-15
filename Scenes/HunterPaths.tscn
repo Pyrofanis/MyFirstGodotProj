@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/HunterMovement.gd" type="Script" id=1]
+
+[node name="PlacesToMove" type="Node2D"]
+script = ExtResource( 1 )
+positions = PoolVector2Array( 0, 0 )
+
+[node name="Pos_2" type="Node2D" parent="."]
+position = Vector2( 138, -31.5 )
+
+[node name="Pos_3" type="Node2D" parent="."]
+position = Vector2( 5, 128.5 )
+
+[node name="Pos_4" type="Node2D" parent="."]
+position = Vector2( 57.5, -228.5 )
+
+[node name="Pos_1" type="Node2D" parent="."]
+position = Vector2( -163.5, -93.5 )
