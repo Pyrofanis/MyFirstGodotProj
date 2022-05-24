@@ -4,6 +4,22 @@
 
 [node name="Hunters" type="Node2D"]
 
+[node name="Hunter5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 460, 76 )
+scale = Vector2( 4, 4 )
+
+[node name="Hunter6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 166, 316 )
+scale = Vector2( 4, 4 )
+
+[node name="Hunter7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 224, -308 )
+scale = Vector2( 4, 4 )
+
+[node name="Hunter8" parent="." instance=ExtResource( 1 )]
+position = Vector2( -249, -35 )
+scale = Vector2( 4, 4 )
+
 [node name="Hunter" parent="." instance=ExtResource( 1 )]
 
 [node name="Hunter2" parent="." instance=ExtResource( 1 )]
