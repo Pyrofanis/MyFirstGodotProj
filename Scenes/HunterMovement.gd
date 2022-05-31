@@ -18,7 +18,7 @@ var velY:=0.0
 
 var initialPos:=Vector2.ZERO
 
-
+var currentlyCollidedObject:=""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -92,6 +92,17 @@ func _AdjustSpeeds():
 	pass
 func _process(delta):
 	_Patrol(delta)
-	#print(timer)
-	#print(get_node(".").name)
 	pass
+func _enter_tree():
+	pass
+
+func _on_Area2D_area_entered(area):
+	if !("hunter" in area.name):
+		currentlyCollidedObject=area.name
+		print(currentlyCollidedObject,name)
+	pass # Replace with function body.
+func _on_Area2D_area_exited(area):
+	if !("hunter" in area.name):
+		currentlyCollidedObject=""
+		print(currentlyCollidedObject,name)
+	pass # Replace with function body.
