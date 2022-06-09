@@ -96,13 +96,17 @@ func _process(delta):
 func _enter_tree():
 	pass
 
+func _chase_fox(area:Area2D):
+	velocity=position-area.position
 func _on_Area2D_area_entered(area):
-	if !("hunter" in area.name):
-		currentlyCollidedObject=area.name
-		print(currentlyCollidedObject,name)
+	if !("hunter" in area.name)||!("Doggo"in area.name):
+		_ReconsiderMove()
+	if "fox"in area.name || "apple"in area.name:
+		_chase_fox(area)
+	if "Leaves" in area.name ||"bush" in area.name:
+		velocity!=velocity
 	pass # Replace with function body.
 func _on_Area2D_area_exited(area):
 	if !("hunter" in area.name):
-		currentlyCollidedObject=""
-		print(currentlyCollidedObject,name)
+		_ReconsiderMove()
 	pass # Replace with function body.
