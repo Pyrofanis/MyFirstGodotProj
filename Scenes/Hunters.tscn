@@ -27,11 +27,11 @@ scale = Vector2( 4, 4 )
 [node name="Doggo2" parent="." instance=ExtResource( 2 )]
 position = Vector2( -62, -311 )
 
+[node name="Doggo4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -199, 226 )
+
+[node name="Hunter" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1, -160 )
+
 [node name="Doggo3" parent="." instance=ExtResource( 2 )]
 position = Vector2( -12, 40 )
-
-[node name="Doggo" parent="Doggo3" instance=ExtResource( 2 )]
-position = Vector2( -187, 186 )
-
-[node name="Hunter" parent="Doggo3" instance=ExtResource( 1 )]
-position = Vector2( 11, -200 )
