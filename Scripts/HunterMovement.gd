@@ -49,7 +49,8 @@ func _ResetState(var maxRange):
 	currentState=randi()%3
 	pass
 func _ResetRotation():
-	set_global_rotation(velocity.angle())
+	global_rotation=velocity.angle()
+	#set_global_rotation(velocity.angle())
 	pass
 
 func _MoveHunter(delta):
@@ -73,13 +74,6 @@ func _Patrol(delta):
 	pass	
 
 
-func _ChangeStatess():
-	## if true run an exei switch kltra me switch
-	#else currentState=rand_range(0,1) _ResetVelocity()
-	#		_NormalActions()
-
-	pass
-
 func _AdjustSpeeds():
 	if currentState ==states.run :
 		actualSpeed=speed*2
@@ -97,14 +91,23 @@ func _enter_tree():
 	pass
 
 func _chase_fox(area:Area2D):
-	velocity=position-area.position
+	var x:=area.global_position.x
+	var y:=area.global_position.y
+	
+	var currVelocity=global_position.direction_to(Vector2(x,y))
+	
+	velocity=currVelocity
+	
+	_ResetRotation()
+
+	
 func _on_Area2D_area_entered(area):
 	if !("hunter" in area.name)||!("Doggo"in area.name):
 		_ReconsiderMove()
-	if "fox"in area.name || "apple"in area.name:
+	if "fox"in area.name:
 		_chase_fox(area)
-	if "Leaves" in area.name ||"bush" in area.name:
-		velocity!=velocity
+	#if "Leaves" in area.name ||"bush" in area.name:
+		#velocity!=velocity
 	pass # Replace with function body.
 func _on_Area2D_area_exited(area):
 	if !("hunter" in area.name):

@@ -4,7 +4,7 @@
 [ext_resource path="res://Sprites/Enemy/doggo.png" type="Texture" id=2]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 51.0392
+radius = 120.0
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 6.0
@@ -12,7 +12,7 @@ height = 8.0
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 800.0
+speed = 1600.0
 timerMin = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
