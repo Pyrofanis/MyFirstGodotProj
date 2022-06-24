@@ -12,7 +12,7 @@ height = 8.0
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 script = ExtResource( 1 )
-speed = 1600.0
+speed = 8000.0
 timerMin = 5.0
 
 [node name="Sprite" type="Sprite" parent="."]
