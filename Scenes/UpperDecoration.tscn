@@ -46,24 +46,24 @@ position = Vector2( 4, 550.5 )
 scale = Vector2( 10, 10 )
 shape = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Leaves area 2d" type="Area2D" parent="."]
 
-[node name="CollisionRight" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionRight" type="CollisionShape2D" parent="Leaves area 2d"]
 position = Vector2( 567, 1 )
 scale = Vector2( 30, 30 )
 shape = SubResource( 1 )
 
-[node name="CollisionLeft" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionLeft" type="CollisionShape2D" parent="Leaves area 2d"]
 position = Vector2( -569, 1 )
 scale = Vector2( 30, 30 )
 shape = SubResource( 1 )
 
-[node name="ColisionUp" type="CollisionShape2D" parent="Area2D"]
+[node name="ColisionUp" type="CollisionShape2D" parent="Leaves area 2d"]
 position = Vector2( 3.99997, -550.5 )
 scale = Vector2( 30, 30 )
 shape = SubResource( 2 )
 
-[node name="ColisionUp2" type="CollisionShape2D" parent="Area2D"]
+[node name="ColisionUp2" type="CollisionShape2D" parent="Leaves area 2d"]
 position = Vector2( 4, 550.5 )
 scale = Vector2( 30, 30 )
 shape = SubResource( 2 )

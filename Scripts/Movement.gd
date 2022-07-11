@@ -9,6 +9,10 @@ var timerCountDown=0
 export var duriation:=0
 var duriationCountdown=0
 var speedTriggered:=false
+
+var is_dead:=false
+var in_leaves=false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	initialspeed=speed
@@ -17,7 +21,9 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	_general_Process(delta)
+	if !is_dead:
+		_general_Process(delta)
+		print(is_dead,in_leaves)
 	pass
 
 func _general_Process(delta):
@@ -63,3 +69,24 @@ func _reset_CountDowns():
 func _reset_Speed():
 	speed=initialspeed
 	speedTriggered=false
+
+func _die():
+	is_dead=true
+	pass
+func _immortal():
+	in_leaves=true
+func _mortal():
+	in_leaves=false
+	
+func _on_foxs_Area_area_entered(area):
+	if "Death" in area.name &&! in_leaves:
+		_die()
+	if "Leaves" in area.name || "Bush" in area.name:
+		_immortal()
+	pass # Replace with function body.
+
+
+func _on_foxs_Area_area_exited(area):
+	if "Leaves" in area.name || "Bush" in area.name:
+		_mortal()
+	pass # Replace with function body.

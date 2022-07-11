@@ -1,17 +1,39 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/ui.tscn" type="PackedScene" id=2]
+
+[sub_resource type="InputEventAction" id=1]
+
+[sub_resource type="ShortCut" id=2]
+resource_local_to_scene = true
+shortcut = SubResource( 1 )
 
 [node name="PlayerWtCamera" type="Node2D"]
 
-[node name="Camera2D" type="Camera2D" parent="."]
-current = true
-zoom = Vector2( 0.5, 0.5 )
-limit_left = -600
-limit_top = -600
-limit_right = 600
-limit_bottom = 600
-editor_draw_limits = true
+[node name="Camera2D" parent="." instance=ExtResource( 2 )]
+
+[node name="Control" type="Control" parent="Camera2D"]
+margin_left = 294.0
+margin_top = -597.0
+margin_right = 598.0
+margin_bottom = -532.0
+
+[node name="MenuButton" type="MenuButton" parent="Camera2D/Control"]
+anchor_right = 0.039
+anchor_bottom = 0.308
+margin_right = 52.144
+margin_bottom = 4.98
+shortcut = SubResource( 2 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D/Control/MenuButton"]
+anchor_right = 1.391
+anchor_bottom = 1.56
+margin_right = -0.0240021
+focus_mode = 2
+text = "Restart"
+fit_content_height = true
+selection_enabled = true
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 

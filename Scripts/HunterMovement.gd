@@ -102,12 +102,10 @@ func _chase_fox(area:Area2D):
 
 	
 func _on_Area2D_area_entered(area):
-	if !("hunter" in area.name)||!("Doggo"in area.name):
-		_ReconsiderMove()
 	if "fox"in area.name:
 		_chase_fox(area)
-	#if "Leaves" in area.name ||"bush" in area.name:
-		#velocity!=velocity
+	if "Leaves" in area.name ||"bush" in area.name:
+		velocity!=velocity
 	pass # Replace with function body.
 func _on_Area2D_area_exited(area):
 	if !("hunter" in area.name):
