@@ -23,13 +23,11 @@ func _ready():
 func _process(delta):
 	if !is_dead:
 		_general_Process(delta)
-		print(is_dead,in_leaves)
 	pass
 
 func _general_Process(delta):
 	_getVelcoty()
 	_run_Countdown(delta)
-	#print(timerCountDown)
 	movement(delta)
 
 func movement(delta):

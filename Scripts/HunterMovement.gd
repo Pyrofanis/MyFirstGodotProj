@@ -24,10 +24,6 @@ var currentlyCollidedObject:=""
 func _ready():
 	initialPos=global_position
 	_ReconsiderMove()
-	print(velocity)
-	print(speed)
-	print(timerRange)
-	print(currentState)
 	pass # Replace with function body.
 
 func _CountTimer(delta):
